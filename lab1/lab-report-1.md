@@ -60,3 +60,17 @@ $  scp id_rsa.pub cs15lwi2zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
 This command will copy the public key file "id_rsa.pub" to your server's "home directory/.ssh" and rename it to "authorized_keys"
 
 ![Image](6.png)
+
+**Optimizing Remote Running**
+
+If you want to edit a file locally and run it on the remote server, You need to:
+
+1. edit the file
+2. copy it to the remote server
+3. run it on the remot server
+
+The whole process can be done in one line that looks like this:
+
+scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/; ssh cs15lwi22...@ieng6.ucsd.edu " javac  WhereAmI.java; java WhereAmI"
+
+![Image](7.png)
