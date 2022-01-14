@@ -8,20 +8,20 @@ Go to https://code.visualstudio.com/ and follow the steps to download and instal
 
 **Remotely Connecting**
 
-1.Find your account information here: https://sdacs.ucsd.edu/~icc/index.php. Enter your current UCSD username and student ID in the "Account Lookup" section. After submission, look for the account that starts with "cs15lwi22". This is your CSE 15l specific account. 
+- Find your account information here: https://sdacs.ucsd.edu/~icc/index.php. Enter your current UCSD username and student ID in the "Account Lookup" section. After submission, look for the account that starts with "cs15lwi22". This is your CSE 15l specific account. 
 
-2.Open a terminal window in VS Code(Terminal button on the top of the screen -> New Terminal) and type the command: 
+- Open a terminal window in VS Code(Terminal button on the top of the screen -> New Terminal) and type the command: 
 
 $ ssh cs15wi22…@ieng6.ucsd.edu 
 (... are the letters in your account)
 
-3.A message will be displayed. Type yes and press enter. 
+- A message will be displayed. Type yes and press enter. 
 
-4.A prompt for your password will show up. Type in your password carefully because the text that you are typing does not actually appear even though it is being inputted to the terminal. After typing in your password, something similar to this screenshot should be displayed. 
+- A prompt for your password will show up. Type in your password carefully because the text that you are typing does not actually appear even though it is being inputted to the terminal. After typing in your password, something similar to this screenshot should be displayed. 
 
 ![Image](2.png)
 
-5.To logout of a remote server, type exit.
+- To logout of a remote server, type exit.
 
 **Trying Some Commands**
 
@@ -49,19 +49,19 @@ Once your file is on the server, you can treat it if it were on your client. For
 **Setting an SSH key**
 
 Constantly needing to type in your password is tedious. This can be solved with SSH keys. You can create a private and public key pair with the command "ssh-keygen", give the public key to a server, and ssh is able to match the keys on your client and the server so you don't need to type your password every time you want to login. 
-1. Type "ssh-keygen" into your terminal on your local machine.
-2. Enter where you want the keys to be created, or just press enter to create them in the default directory
-3. If you want a passphrase for the private key, type it in. If not, just press enter 2 times. Notice the passphrase is for the private key, not the password that you use to login to the server. 
+- Type "ssh-keygen" into your terminal on your local machine.
+- Enter where you want the keys to be created, or just press enter to create them in the default directory
+- If you want a passphrase for the private key, type it in. If not, just press enter 2 times. Notice the passphrase is for the private key, not the password that you use to login to the server. 
 
 
-4. Go to the directory where you create the keys, you should see two files, "id_rsa" is the private key. "id_rsa.pub" is the public key. The private key file should be stored on your local machine, under "home directory/.ssh"
-5. Now you need to copy the public key to your account on the server. Log into your account, and create a directory called .ssh under home directory using this command:
+- Go to the directory where you create the keys, you should see two files, "id_rsa" is the private key. "id_rsa.pub" is the public key. The private key file should be stored on your local machine, under "home directory/.ssh"
+- Now you need to copy the public key to your account on the server. Log into your account, and create a directory called .ssh under home directory using this command:
  
 $ mkdir .ssh.
  
 Logout by typing the command: exit.
 
-6. On your local machine, go to the directory where you store the public key, and run the command:
+- On your local machine, go to the directory where you store the public key, and run the command:
 
 $  scp id_rsa.pub cs15lwi2zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
