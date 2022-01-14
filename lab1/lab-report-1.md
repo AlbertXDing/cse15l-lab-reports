@@ -1,4 +1,5 @@
 
+# Set Up Access to a Remote Server on Mac
 
 **Installing VS Code**
 
@@ -34,12 +35,19 @@ All the commands that are normally available on your local machine are also avai
 Sometimes you want to copy files from your client to the server. This can be done with a command called “scp”, which stands for secure copy. Create a new file on your local machine, such as WhereAmI.java which has the following code:
 
 class WhereAmI {
+
    public static void main(String[] args) {
+
      System.out.println(System.getProperty("os.name"));
+
      System.out.println(System.getProperty("user.name"));
+
      System.out.println(System.getProperty("user.home"));
+
      System.out.println(System.getProperty("user.dir"));
+
    }
+
  }
 
 
