@@ -31,7 +31,7 @@ All the commands that are normally available on your local machine are also avai
 
 **Moving Files with SCP**
 
-Sometimes you want to copy files from your client to the server. This can be done with a command called “scp”, which stands for secure copy. Create a new file on your local machine, such as WhereAmI.java which has the following code:
+Sometimes you want to copy files from your client to the server. This can be done with a command called `scp`, which stands for secure copy. Create a new file on your local machine, such as `WhereAmI.java` which has the following code:
 ```
 class WhereAmI {
 
@@ -52,13 +52,13 @@ class WhereAmI {
 
 
 On your local machine, open a terminal from the directory that contains your file, run the command:  
-`Scp (local file’s name) cs15kwi22…@ieng6.ucsd.edu:(The directory you would like to place your file in on the server)`
+`$ Scp (local file’s name) cs15kwi22…@ieng6.ucsd.edu:(The directory you would like to place your file in on the server)`
 
 An example using WhereAmI.java would look like this: 
 
-`scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/`
+`$ scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/`
 
-Once your file is on the server, you can treat it as if it were on your client. For example, WhereAmI.java can be compiled and executed on the server: 
+Once your file is on the server, you can treat it as if it were on your client. For example, `WhereAmI.java` can be compiled and executed on the server: 
 
 ![Image](4.png)
 
@@ -74,7 +74,7 @@ Constantly needing to type in your password is tedious. This can be solved with 
 - Go to the directory where you create the keys, you should see two files, `id_rsa` is the private key. `id_rsa.pub` is the public key. The private key file should be stored on your local machine, under `home directory/.ssh`
 - Now you need to copy the public key to your account on the server. Log into your account, and create a directory called .ssh under home directory using this command:
  
-`$ mkdir .ssh.`
+`$ mkdir .ssh`
  
 Logout by typing the command: `exit`.
 
