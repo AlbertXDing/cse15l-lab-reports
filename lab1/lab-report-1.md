@@ -9,12 +9,11 @@ Go to [Visual Studio Code](https://code.visualstudio.com/) and follow the steps 
 
 **Remotely Connecting**
 
-- Find your [account information](https://sdacs.ucsd.edu/~icc/index.php). Enter your current UCSD username and student ID in the "Account Lookup" section. After submission, look for the account that starts with "cs15lwi22". This is your CSE 15l specific account. 
+- Find your [account information](https://sdacs.ucsd.edu/~icc/index.php). Enter your current UCSD username and student ID in the "Account Lookup" section. After submission, look for the account that starts with `cs15lwi22`. This is your CSE 15l specific account. 
 
-- Open a terminal window in VS Code(Terminal button on the top of the screen -> New Terminal) and type the command: 
+- Open a terminal window in VS Code(Terminal button on the top of the screen -> New Terminal) and type the command(notice ... are the letters in your account): 
 
 `$ ssh cs15wi22…@ieng6.ucsd.edu` 
-(... are the letters in your account)
 
 - A message will be displayed. Type `yes` and press enter. 
 
@@ -33,26 +32,27 @@ All the commands that are normally available on your local machine are also avai
 **Moving Files with SCP**
 
 Sometimes you want to copy files from your client to the server. This can be done with a command called “scp”, which stands for secure copy. Create a new file on your local machine, such as WhereAmI.java which has the following code:
+```
+class WhereAmI {
 
-`class WhereAmI {`
-
-   `public static void main(String[] args) {`
+   public static void main(String[] args) {
    
-   `System.out.println(System.getProperty("os.name"));`
+   System.out.println(System.getProperty("os.name"));
 
-   `System.out.println(System.getProperty("user.name"));`
+   System.out.println(System.getProperty("user.name"));
 
-   `System.out.println(System.getProperty("user.home"));`
+   System.out.println(System.getProperty("user.home"));
 
-   `System.out.println(System.getProperty("user.dir"));`
+   System.out.println(System.getProperty("user.dir"));
 
-   `}`
+   }
 
- `}`
+ }
+ ```
 
 
 On your local machine, open a terminal from the directory that contains your file, run the command:  
-`Scp (local file’s name) cs15kwi22…@ieng6.ucsd.edu`:(The directory you would like to place your file in on the server)
+`Scp (local file’s name) cs15kwi22…@ieng6.ucsd.edu:(The directory you would like to place your file in on the server)`
 
 An example using WhereAmI.java would look like this: 
 
@@ -76,13 +76,13 @@ Constantly needing to type in your password is tedious. This can be solved with 
  
 `$ mkdir .ssh.`
  
-Logout by typing the command: exit.
+Logout by typing the command: `exit`.
 
 - On your local machine, go to the directory where you store the public key, and run the command:
 
 `$  scp id_rsa.pub cs15lwi2zz@ieng6.ucsd.edu:~/.ssh/authorized_keys`
 
-This command will copy the public key file `id_rsa.pub` to your server's `home directory/.ssh` and rename it to `authorized_keys`. After this step, you will be able to run the ssh or scp command without typing your password.
+This command will copy the public key file `id_rsa.pub` to your server's `home directory/.ssh` and rename it to `authorized_keys`. After this step, you will be able to run the `ssh` or `scp` command without typing your password.
 
 ![Image](6.png)
 
