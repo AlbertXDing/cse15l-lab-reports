@@ -52,9 +52,9 @@ class WhereAmI {
 
 
 On your local machine, open a terminal from the directory that contains your file, run the command:  
-`$ Scp (local file’s name) cs15kwi22…@ieng6.ucsd.edu:(The directory you would like to place your file in on the server)`
+`$ scp (local file’s name) cs15kwi22…@ieng6.ucsd.edu:(The directory you would like to place your file in on the server)`
 
-An example using WhereAmI.java would look like this: 
+An example using `WhereAmI.java` would look like this: 
 
 `$ scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/`
 
@@ -91,14 +91,24 @@ This command will copy the public key file `id_rsa.pub` to your server's `home d
 If you want to edit a java program locally and run it on the remote server, You need to first edit your java file, then:
 
 - copy it to the remote server
+`$ scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/`
+
 - login to the server
-- compile it with the command javac
-- run it with the command java
+`$ ssh cs15lwi22...@ieng6.ucsd.edu`
 
-The whole process can be done in one line that looks like this:
+- compile it with the command javac on the server
+`$ javac WhereAmI.java`
 
-`scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/; ssh cs15lwi22...@ieng6.ucsd.edu “ javac WhereAmI.java; java WhereAmI”`
+- run it with the command java on the server
+`$ java WhereAmI`
 
-This takes approximately 4 keystrokes after editing your java program, whereas typing each command individuall takes  about 16. 
+Assuming you have all the commands typed in a text file, for each of the above commands, you need to highlight the command, copy(`ctl-c`), paste(`ctl-v`) to terminal, and hit `enter`. You need a total of 16 keystrokes/mouse clicks. It can take up to 20 seconds to do all the steps.
+
+You can use semicolons to run multiple commands on the same line. You can also write a command in quotes at the end of an ssh command to directly run it on the remote server. As a result, the above four steps can be done in one line that looks like this:
+
+`$ scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/; ssh cs15lwi22...@ieng6.ucsd.edu “ javac WhereAmI.java; java WhereAmI”`
+
+This takes 4 keystrokes/mouse clicks, and you can complete it in 2-3 seconds.
+
 
 ![Image](7.png)
