@@ -88,27 +88,32 @@ This command will copy the public key file `id_rsa.pub` to your server's `home d
 
 **Optimizing Remote Running**
 
+
 If you want to edit a java program locally and run it on the remote server, You need to first edit your java file, then:
 
 - copy it to the remote server
+
 `$ scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/`
 
 - login to the server
+
 `$ ssh cs15lwi22...@ieng6.ucsd.edu`
 
 - compile it with the command javac on the server
+
 `$ javac WhereAmI.java`
 
 - run it with the command java on the server
+
 `$ java WhereAmI`
 
-Assuming you have all the commands typed in a text file, for each of the above commands, you need to highlight the command, copy(`ctl-c`), paste(`ctl-v`) to terminal, and hit `enter`. You need a total of 16 keystrokes/mouse clicks. It can take up to 20 seconds to do all the steps.
+Assuming you have all the commands typed in a text file, for each of the above commands, you need to click to go to the text file, highlight the command in the file, copy(`ctl-c`), click to go to the terminal, paste(`ctl-v`) to terminal, and hit `enter`. You need a total of 24 keystrokes/mouse clicks. It can take up to 40 seconds to do all the steps.
 
-You can use semicolons to run multiple commands on the same line. You can also write a command in quotes at the end of an ssh command to directly run it on the remote server. As a result, the above four steps can be done in one line that looks like this:
+You can use semicolons to run multiple commands on the same line. You can also write a command in quotes at the end of an `ssh` command to directly run it on the remote server. As a result, the above four steps can be done in one line that looks like this:
 
-`$ scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/; ssh cs15lwi22...@ieng6.ucsd.edu “ javac WhereAmI.java; java WhereAmI”`
+`$ scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/; ssh cs15lwi22...@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"`
 
-This takes 4 keystrokes/mouse clicks, and you can complete it in 2-3 seconds.
+Assuming you have this line typed in a text file, it takes 6 keystrokes/mouse clicks, and you can complete it in 7-10 seconds.
 
 
 ![Image](7.png)
