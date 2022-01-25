@@ -99,4 +99,6 @@ The whole process can be done in one line that looks like this:
 
 `scp WhereAmI.java cs15lwi22...@ieng6.ucsd.edu:~/; ssh cs15lwi22...@ieng6.ucsd.edu “ javac WhereAmI.java; java WhereAmI”`
 
+This takes approximately 4 keystrokes after editing your java program, whereas typing each command individuall takes  about 16. 
+
 ![Image](7.png)
