@@ -32,10 +32,10 @@ MarkdownParse was recording links that did not immediately follow brackets. This
 
 Symptom:
 
-![Image](bug3symptom.png)
+![Image](symptom3.png)
 
 Failure inducing [Test File](https://github.com/AlbertXDing/CSE15L-RoseateSpoonbill/blob/main/test-file4.md)
 
 
-MarkdownParse could not distinguish between links and images. This was fixed by checking for `!` before brackets, and skipping the parenthesis right after. 
+MarkdownParse could not distinguish between links and images due to their syntax being almost identical. This was fixed by checking for `!` before brackets, and skipping the parenthesis right after. 
 
