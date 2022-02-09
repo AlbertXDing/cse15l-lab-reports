@@ -5,11 +5,13 @@
 ![Image](change1.png)
 
 Symptom:
+
+(The symptom is an infinite loop so I can't show the command and symptom in the same screen shot)
+
+
 ![Image](command1.png)
 
 ![Image](bug1symptom.png)
-
-(The symptom is an infinite loop so I can't show the command and symptom in the same screen shot)
 
 Failure inducing [Test File](https://github.com/AlbertXDing/markdown-parse/blob/main/test-file2.md)
 
