@@ -12,11 +12,11 @@ Snippet 1:
 
 Snippet 2:
 
-[a.com(()), example.com]
+[a.com, a.com(()), example.com]
 
 Snippet 3:
 
-[]
+[https://ucsd-cse15l-w22.github.io/]
 
 **Tests**
 
@@ -32,7 +32,7 @@ The bug in snippit 1 can be fixed by making sure any brackets are not counted wi
 
 The bug in snippit 2 can be fixed by searching for the last `)` in the line. Markdownparse also needs to identify `/{`.
 
-Snippit 3 worked as expected.
+Snippit 3 can be fixed by looking for brackets and parenthesis that span multiple lines but do not have line breaks.
 
 The tests I am reviewing:
 
