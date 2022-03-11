@@ -4,7 +4,7 @@
 
 [Repository I'm reviewing](https://github.com/AlbertXDing/markdown-parse) 
 
-**What the snippets should preduce**
+**What the snippets should produce**
 
 Snippet 1:
 
