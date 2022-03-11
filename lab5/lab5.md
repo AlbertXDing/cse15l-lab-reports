@@ -71,3 +71,4 @@ if(potentialLink.indexOf("\n") == -1) {
         toReturn.add(potentialLink);
     currentIndex = closeParen + 1;
 }
+```
