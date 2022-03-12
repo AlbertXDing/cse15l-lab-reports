@@ -1,6 +1,6 @@
 # Lab 5
 
-I croned the two repositories on `ieng6`, then I run the shell script `script.sh` and piped the results to files. I found tests with different results using the `diff` command :
+I cloned the two repositories on `ieng6`, then I run the shell script `script.sh` and piped the results to files. I found tests with different results using the `diff` command :
 
 `diff CSE15L-RoseateSpoonbill/tests.txt markdown-parse/results.txt `
 
