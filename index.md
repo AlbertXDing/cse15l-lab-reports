@@ -4,4 +4,6 @@
 
 [Lab Report 3](lab3/lab3.md)
 
-[lab-report-4-week-8](lab4/lab4.md)
+[Lab Report 4](lab4/lab4.md)
+
+[Lab Report 5](lab5/lab5.md)
